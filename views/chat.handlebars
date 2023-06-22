@@ -1,0 +1,23 @@
+<nav class="navbar bg-body-tertiary" style="width:100vw ">
+  <div class="container-fluid" style="text-align: center; ">
+    <form class="" role="" onsubmit="return enviarMensaje()" style="width:100vw">
+      <h2 style="font-family:sans-serif; ">Nuevo Mensaje</h2>
+      <input class="form-control me-2" type="text" placeholder="Ingrese su usuario" aria-label="Search" id="usuario"
+        style="margin:10px">
+      <input class="form-control me-2" type="text" placeholder="Ingrese su mensaje" aria-label="Search" id="mensaje"
+        style="margin:10px">
+      <button class="btn btn-outline-success" type="submit" style="margin: 10px;">Enviar Mensaje</button>
+    </form>
+  </div>
+  <div id="estado2" style="width:100vw; text-align: center"></div>
+</nav>
+
+<div class="container text-center" style="padding: 5px;">
+  <div class="row align-items-start" id="caja2">
+  </div>
+</div>
+
+
+</div>
+<script src="/socket.io/socket.io.js"></script>
+<script src="/js/chat.js"></script>

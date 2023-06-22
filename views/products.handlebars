@@ -1,0 +1,85 @@
+<nav class="navbar bg-body-tertiary" style="width:100vw ">
+  <div class="container-fluid" style="text-align: center; ">
+    <form class="" role="" onsubmit="return addProduct()" style="width:100vw">
+      <h2 style="font-family:sans-serif; ">Carga de nuevos productos</h2>
+      <input class="form-control me-2" type="text" placeholder="Titulo" aria-label="Search" id="title"
+        style="margin:10px">
+      <input class="form-control me-2" type="text" placeholder="Descripcion" aria-label="Search" id="description"
+        style="margin:10px">
+      <input class="form-control me-2" type="text" placeholder="Codigo" aria-label="Search" id="code"
+        style="margin:10px">
+      <input class="form-control me-2" type="text" placeholder="Precio" aria-label="Search" id="price"
+        style="margin:10px">
+      <input class="form-control me-2" type="text" placeholder="Stock" aria-label="Search" id="stock"
+        style="margin:10px">
+      <input class="form-control me-2" type="text" placeholder="Categoria" aria-label="Search" id="category"
+        style="margin:10px">
+      <button class="btn btn-outline-success" type="submit" style="margin: 10px;">Cargar Producto</button>
+    </form>
+  </div>
+</nav>
+
+<div id="estado" style="width:100vw; text-align: center"></div>
+
+<nav class="navbar bg-body-tertiary" style="width:100vw ">
+  <div class="container-fluid" style="text-align: center; ">
+    <form class="" role="" onsubmit="return findProductByID()" style="width:100vw">
+      <h2 style="font-family:sans-serif; ">Busqueda de productos por ID</h2>
+      <input class="form-control me-2" type="text" placeholder="Ingrese ID del producto a buscar" aria-label="Search"
+        id="idProducto" style="margin:10px">
+      <button class="btn btn-outline-success" type="submit" style="margin: 10px;">Buscar Producto</button>
+    </form>
+  </div>
+</nav>
+
+<nav class="navbar bg-body-tertiary" style="width:100vw ">
+  <div class="container-fluid" style="text-align: center; ">
+    <form class="" role="" onsubmit="return updateProduct()" style="width:100vw">
+      <h2 style="font-family:sans-serif; ">Actualizar productos</h2>
+      <input class="form-control me-2" type="text" placeholder="ID Producto a actualizar" aria-label="Search" id="id2"
+        style="margin:10px">
+      <input class="form-control me-2" type="text" placeholder="Titulo" aria-label="Search" id="title2"
+        style="margin:10px">
+      <input class="form-control me-2" type="text" placeholder="Descripcion" aria-label="Search" id="description2"
+        style="margin:10px">
+      <input class="form-control me-2" type="text" placeholder="Codigo" aria-label="Search" id="code2"
+        style="margin:10px">
+      <input class="form-control me-2" type="text" placeholder="Precio" aria-label="Search" id="price2"
+        style="margin:10px">
+      <input class="form-control me-2" type="text" placeholder="Stock" aria-label="Search" id="stock2"
+        style="margin:10px">
+      <input class="form-control me-2" type="text" placeholder="Categoria" aria-label="Search" id="category2"
+        style="margin:10px">
+      <button class="btn btn-outline-success" type="submit" style="margin: 10px;">Actualizar Producto</button>
+    </form>
+  </div>
+</nav>
+
+<nav class="navbar bg-body-tertiary" style="width:100vw ">
+  <div class="container-fluid" style="text-align: center; ">
+    <form class="" role="" onsubmit="return findCarritoById()" style="width:100vw">
+      <h2 style="font-family:sans-serif; ">Carrito</h2>
+      <input class="form-control me-2" type="text" placeholder="Ingrese su nombre de Usuario" aria-label="Search"
+        id="idUsuario" style="margin:10px">
+      <button class="btn btn-outline-success" type="submit" style="margin: 10px;">Loguerme</button>
+    </form>
+  </div>
+  <div class="container text-center" style="padding: 10px;">
+    <div class="row align-items-start" id="cajaCarrito">
+    </div>
+  </div>
+</nav>
+
+<div class="text-center p-2">
+<h2 style="font-family:sans-serif; ">Catalogo de Productos</h2>
+</div>
+
+<div class="container text-center" style="padding: 10px;">
+  <div class="row align-items-start" id="caja">
+  </div>
+</div>
+
+
+</div>
+<script src="/socket.io/socket.io.js"></script>
+<script src="/js/products.js"></script>
